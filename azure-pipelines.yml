@@ -24,20 +24,18 @@ stages:
         containerRegistry: 'docify'
         repository: 'server'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        buildContext: 'server/'
+        Dockerfile: 'server/Dockerfile'
     - task: Docker@2
       inputs:
         containerRegistry: 'docify'
         repository: 'client'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        buildContext: 'client/'
+        Dockerfile: 'client/Dockerfile'
     - task: Docker@2
       inputs:
         containerRegistry: 'docify'
         repository: 'auth'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        buildContext: 'auth/'
+        Dockerfile: 'auth/Dockerfile'
+        
     

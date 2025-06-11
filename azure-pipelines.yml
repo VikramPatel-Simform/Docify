@@ -11,6 +11,7 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
 
+pool: Custom-Pool
 stages:
 - stage: Build
   displayName: Build image
